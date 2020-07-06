@@ -1,0 +1,62 @@
+<%-include("partials/headerStudent");-%>
+
+<!-- entering student's name -->
+<form action="/edit" method="post">
+    <div class="edit-student-name">
+        <h4>Find a student by name and DoB</h4>
+        <h5 class="edit-name">Name:</h5>
+        <h5>First:</h5>
+        <input type="text" name="editStudentFName" id="edit-student-fname">
+        <h5>Last:</h5>
+        <input type="text" name="editStudentLName" id="edit-student-lname">
+        <h5 class="edit-dob">Date of birth:</h5>
+        <h5>Month:</h5>
+        <input type="text" name="editBirthMonth" id="edit-student-bmonth">
+        <h5>Day:</h5>
+        <input type="text" name="editBirthDay" id="edit-student-bday">
+        <h5>Year:</h5>
+        <input type="text" name="editBirthYear" id="edit-student-byear">
+    </div>
+
+
+
+    <!-- starting date -->
+    <div class="edit-starting-date">
+        <h4>Update student's data</h4>
+        <h5>Start Date:</h5>
+        <label for="starting-date">
+            <div class="stMonth">
+                <h6>Month:</h6>
+                <input type="text" name="editStartingMonth" id="starting-month" value="">
+            </div>
+
+            <div class="stDay">
+                <h6>Day:</h6>
+                <input type="text" name="editStartingDay" id="starting-day" value="">
+            </div>
+
+            <div class="stYear">
+                <h6>Year:</h6>
+                <input type="text" name="editStartingYear" id="starting-year" value="">
+            </div>
+        </label>
+
+    </div>
+
+    <!-- number of weeks -->
+    <div class="edit-number-of-weeks">
+        <h5>Number of weeks:</h5>
+        <input type="text" name="editNumOfWeeks">
+    </div>
+
+    <!-- button -->
+    <div class="edit-button">
+        <button type="submit">Find and Update</button>
+    </div>
+
+    <div class="no-matches">
+        <h4><%=noMatches%></h4>
+    </div>
+</form>
+
+<%-include("partials/footer");-%>

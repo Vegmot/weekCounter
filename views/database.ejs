@@ -1,0 +1,15 @@
+<%-include("partials/headerStudent");-%>
+<div class="database-container">
+    <h4><%= pageText %></h4>
+
+    <div class="database-data">
+        <h4>** You have <%=studentsInfo.length%> student(s) on the list **</h4>
+        <h5>Name :: DoB :: Start (Mon) :: End (Fri) :: Weeks</h5>
+        <% studentsInfo.forEach(data => { %>
+        <p><%=data.fName%> <%=data.lName%> :: <%=data.birthMonth%>.<%=data.birthDay%>.<%=data.birthYear%> ::
+            <%=data.startingMonth%>/<%=data.startingDay%>/<%=data.startingYear%> ::
+            <%=data.endingMonth%>/<%=data.endingDay%>/<%=data.endingYear%> :: <%=data.numOfWeeks%></p>
+        <% }); %>
+    </div>
+</div>
+<%-include("partials/footer");-%>

@@ -1,0 +1,50 @@
+<%- include("partials/headerVacation"); -%>
+
+<div class="vac-update-success-message">
+    <h5><%=vacUpdateMsgOne%></h5>
+</div>
+
+<div class="vac-update-success-info">
+    <div class="vac-update-success-name">
+        <h6>Name: </h6>
+        <p><%= vacFoundName %></p>
+    </div>
+    <div class="vac-update-success-starting-date">
+        <h6>Starting date: </h6>
+        <p><%= vacFoundStartingMonth %>/<%= vacFoundStartingDay %>/<%= vacFoundStartingYear %></p>
+    </div>
+    <div class="vac-update-success-ending-date">
+        <h6>Ending date: </h6>
+        <p><%= vacFoundEndingMonth %>/<%= vacFoundEndingDay %>/<%= vacFoundEndingYear %></p>
+    </div>
+
+
+    <div class="vac-update-success-message">
+        <h5><%=vacUpdateMsgTwo%></h5>
+    </div>
+    <div class="vac-update-success-name">
+        <h6>Name: </h6>
+        <p><%= vacUpdateName %></p>
+    </div>
+    <div class="vac-update-success-starting-date">
+        <h6>Starting date: </h6>
+        <p><%= vacUpdateStartingMonth %>/<%= vacUpdateStartingDay %>/<%= vacUpdateStartingYear %></p>
+    </div>
+    <div class="vac-update-success-ending-date">
+        <h6>Ending date: </h6>
+        <p><%= vacUpdateEndingMonth %>/<%= vacUpdateEndingDay %>/<%= vacUpdateEndingYear %></p>
+    </div>
+
+</div>
+
+
+<div class="vac-update-success-btns">
+    <form action="/vacationEdit">
+        <button type="submit" class="vac-update-success-create-btn">Update another</button>
+    </form>
+    <br>
+    <button type="button" class="vac-update-success-close-btn"
+        onclick="window.open('', '_self', ''); window.close();">Close</button>
+</div>
+
+<%- include("partials/footer"); -%>

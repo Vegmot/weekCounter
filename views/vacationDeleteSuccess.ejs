@@ -1,0 +1,33 @@
+<%- include("partials/headerVacation"); -%>
+
+<div class="delete-message">
+    <h5>Successfully deleted the data:</h5>
+</div>
+
+<div class="delete-info">
+    <div class="delete-name">
+        <h6>Name:</h6>
+        <p><%= delVacName %></p>
+    </div>
+    <div class="delete-vac-sdate">
+        <h6>Start date:</h6>
+        <p><%=delVacStartMonth%>/<%=delVacStartDay%>/<%=delVacStartYear%></p>
+    </div>
+    <div class="delete-vac-edate">
+        <h6>End date:</h6>
+        <p><%=delVacEndMonth%>/<%=delVacEndDay%>/<%=delVacEndYear%></p>
+    </div>
+</div>
+</div>
+
+
+<div class="delete-btns">
+    <form action="/vacationDelete">
+        <button type="submit" class="delete-create-btn">Delete another</button>
+    </form>
+    <br>
+    <button type="button" class="delete-close-btn"
+        onclick="window.open('', '_self', ''); window.close();">Close</button>
+</div>
+
+<%- include("partials/footer"); -%>

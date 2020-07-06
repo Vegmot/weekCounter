@@ -1,0 +1,359 @@
+/* Connected. Checked. */
+
+/* Font-family: Mclaren, Montserrat(regular, bold), Roboto(regular, bold) */
+/* global */
+body {
+  font-family: "Mclaren", sans-serif;
+  background-color: #ffbcbc;
+  background-image: linear-gradient(135deg, #eceddc 30.6%, transparent 20%);
+  background-position: top right;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+.main-header {
+  height: 50px;
+  background: #c9485b;
+  text-align: center;
+}
+
+.header-text-h1 {
+  color: #faf4ff;
+}
+
+.main-calendar {
+  margin: 0 auto;
+}
+
+#create {
+  margin-top: 50%;
+}
+
+/* Buttons */
+#functions {
+  text-align: center;
+}
+
+.function-button {
+  display: block;
+  background: transparent;
+  border: none;
+  margin: 30% auto;
+}
+
+.function-button:hover {
+  color: #fe346e;
+}
+
+#main-footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 50px;
+  background: #c9485b;
+}
+
+.footer-text {
+  color: #faf4ff;
+}
+
+/* index pages */
+
+/* create.ejs */
+
+.create-student,
+.create-result {
+  margin-top: 8%;
+}
+
+.create-starting-date,
+.create-number-of-weeks,
+.create-calculate {
+  margin-top: 5%;
+}
+
+label h6,
+.create-student h6,
+.date-of-birth p,
+.stMonth,
+.stDay,
+.stYear,
+.create-fName,
+.create-lName,
+#create-student-fName,
+#create-student-lName,
+#starting-month,
+#starting-day,
+#starting-year,
+#dob-month,
+#dob-day,
+#dob-year {
+  display: inline;
+}
+
+#starting-month,
+#starting-day,
+#starting-year,
+#dob-month,
+#dob-day,
+#dob-year {
+  width: 16%;
+}
+
+#create-student-fName,
+#create-student-lName {
+  width: 30%;
+}
+
+.date-of-birth {
+  margin-top: 8%;
+}
+
+/* edit.ejs */
+
+.edit-student-name {
+  margin-top: 2%;
+}
+
+.edit-name,
+.edit-dob {
+  display: block !important;
+}
+
+.edit-current-data {
+  line-height: 1;
+}
+
+.edit-current-data .notice,
+.edit-starting-date,
+.edit-button {
+  margin-top: 6%;
+}
+
+.edit-student-name h5,
+.edit-student-name input[text] {
+  display: inline;
+}
+
+.edit-student-name .edit-dob {
+  margin-top: 5%;
+}
+
+#edit-student-fname,
+#edit-student-lname {
+  width: 30%;
+  display: inline;
+}
+
+#edit-student-bmonth,
+#edit-student-bday,
+#edit-student-byear {
+  width: 16%;
+  display: inline;
+}
+
+/* database.ejs */
+.database-container h4 {
+  margin: 5% auto;
+}
+
+.database-data h5 {
+  margin: 5% auto;
+}
+
+.database-data p {
+  margin-top: 5%;
+}
+
+/* delete.ejs */
+.delete-current-data {
+  line-height: 1;
+}
+
+.delete-student-name h4 {
+  margin-top: 5%;
+}
+
+.delete-buttons,
+.delete-current-data .notice {
+  margin-top: 5%;
+}
+
+.delete-confirm {
+  margin-top: 2%;
+}
+
+.delete-dob {
+  margin-top: 5%;
+}
+
+.delete-dob h5,
+.delete-dob input[text] {
+  display: inline;
+}
+
+#deleteBMonth,
+#deleteBDay,
+#deleteBYear {
+  width: 16%;
+}
+
+.fandDButton {
+  margin-top: 10%;
+}
+
+/* vacationCreate.ejs */
+.create-vacation-starting-date h6,
+.create-vacation-starting-date input[text],
+.create-vacation-ending-date h6,
+.create-vacation-ending-date input[text],
+.vac-stMonth,
+.vac-stDay,
+.vac-stYear,
+.vac-endMonth,
+.vac-endDay,
+.vac-endYear {
+  display: inline;
+}
+
+#vac-starting-month,
+#vac-starting-day,
+#vac-starting-year,
+#vac-ending-month,
+#vac-ending-day,
+#vac-ending-year {
+  width: 16%;
+}
+
+.create-vacation-starting-date,
+.create-vacation-ending-date {
+  margin-top: 10%;
+}
+
+.create-vacation,
+.create-vacation h5 {
+  margin-top: 5%;
+}
+
+.vacation-create-button {
+  margin-top: 20%;
+}
+
+/* vacationEdit.ejs */
+#find-vac-name,
+.find-vacation-name input[text],
+.find-vacation-starting-date h6,
+#find-vacation-starting-month,
+#find-vacation-starting-day,
+#find-vacation-starting-year,
+.find-vacation-ending-date h6,
+#find-vacation-ending-month,
+#find-vacation-ending-day,
+#find-vacation-ending-year,
+#update-vac-name,
+.update-vacation-name input[text],
+.update-vacation-starting-date h6,
+#update-vacation-starting-month,
+#update-vacation-starting-day,
+#update-vacation-starting-year,
+.update-vacation-ending-date h6,
+#update-vacation-ending-month,
+#update-vacation-ending-day,
+#update-vacation-ending-year {
+  display: inline;
+}
+
+#find-vacation-starting-month,
+#find-vacation-starting-day,
+#find-vacation-starting-year,
+#find-vacation-ending-month,
+#find-vacation-ending-day,
+#find-vacation-ending-year,
+#update-vacation-starting-month,
+#update-vacation-starting-day,
+#update-vacation-starting-year,
+#update-vacation-ending-month,
+#update-vacation-ending-day,
+#update-vacation-ending-year {
+  width: 16%;
+}
+
+.find-vacation-starting-date h5 {
+  margin-top: 2%;
+}
+
+#vac-or {
+  margin: 1% auto;
+}
+
+.update-vacation-name,
+.update-vacation-ending-date,
+.update-vacation-button {
+  margin-top: 5%;
+}
+
+.update-vacation-name .vac-new-name {
+  margin-bottom: 2%;
+}
+.update-vacation-starting-date h5 {
+  margin-top: 2%;
+}
+
+/* vacationDatabase.ejs */
+
+/* vacationDelete.ejs */
+.delete-vacation-name h5,
+.delete-vacation-name input[text],
+.delete-vacation-start-date h6,
+.delete-vacation-end-date h6,
+#deleteSMonth,
+#deleteSDay,
+#deleteSYear,
+#deleteEMonth,
+#deleteEDay,
+#deleteEYear {
+  display: inline;
+}
+
+.delete-vacation-start-date h5,
+.delete-vacation-end-date h5 {
+  display: block;
+}
+
+#deleteSMonth,
+#deleteSDay,
+#deleteSYear,
+#deleteEMonth,
+#deleteEDay,
+#deleteEYear {
+  width: 16%;
+}
+
+.delete-vacation-start-date,
+.delete-vacation-end-date {
+  margin-top: 10%;
+}
+
+.delete-vacation-end-date {
+  margin-bottom: 5%;
+}
+
+.delete-vacation-name p {
+  margin-bottom: 5%;
+}
+
+/* Media */
+@media(max-width: 399px) {
+  .header-text-h1 {
+    font-size: 50%;
+  }
+
+
+}

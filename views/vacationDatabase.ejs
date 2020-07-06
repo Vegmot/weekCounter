@@ -1,0 +1,14 @@
+<%-include("partials/headerVacation");-%>
+<div class="database-container">
+    <h4><%= vacPageText %></h4>
+
+    <div class="database-data">
+        <h4>| You have <%=vacationsInfo.length%> vacation(s) on the list |</h4>
+        <h5>Name :: Start date :: End date</h5>
+        <% vacationsInfo.forEach(data => { %>
+        <p><%=data.vName%> :: <%=data.startMonth%>/<%=data.startDay%>/<%=data.startYear%> :: <%=data.endMonth%>/<%=data.endDay%>/<%=data.endYear%></p>
+        <% }); %>
+    </div>
+</div>
+
+<%-include("partials/footer");-%>

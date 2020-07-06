@@ -1,0 +1,39 @@
+<%- include("partials/headerStudent"); -%>
+
+<div class="success-message">
+    <h5><%=succMsg%></h5>
+</div>
+
+<div class="success-info">
+    <div class="success-name">
+        <h6>Name: </h6>
+        <p><%= succFName %> <%= succLName %></p>
+    </div>
+    <div class="success-dob">
+        <h6>Date of Birth:</h6>
+        <p><%= succBirthMonth %>/<%= succBirthDay %>/<%= succBirthYear %></p>
+    </div>
+    <div class="success-starting-date">
+        <h6>Starting date: </h6>
+        <p><%= succStartingMonth %>/<%= succStartingDay %>/<%= succStartingYear %></p>
+    </div>
+    <div class="success-ending-date">
+        <h6>Ending date: </h6>
+        <p><%= succEndingMonth %>/<%= succEndingDay %>/<%= succEndingYear %></p>
+    </div>
+    <div class="suceess-num-of-weeks">
+        <h6># of weeks: </h6>
+        <p><%= succNumOfWeeks %></p>
+    </div>
+</div>
+
+
+<div class="success-btns">
+    <form action="/create">
+        <button type="submit" class="success-create-btn">Create another</button>
+    </form>
+    <br>
+    <button type="button" class="success-close-btn" onclick="window.open('', '_self', ''); window.close();">Close</button>
+</div>
+
+<%- include("partials/footer"); -%>

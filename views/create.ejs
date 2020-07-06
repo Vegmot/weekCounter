@@ -1,0 +1,72 @@
+<%-include("partials/headerStudent");-%>
+
+<!-- Student's name -->
+<form action="/create" method="post">
+
+    <div class="create-student">
+
+        <h5>Student's name:</h5>
+        <div class="create-fName">
+            <h6>First:</h6>
+            <input type="text" name="createStudentFName" id="create-student-fName" value="">
+        </div>
+        <div class="create-lName">
+            <h6>Last:</h6>
+            <input type="text" name="createStudentLName" id="create-student-lName" value="">
+        </div>
+        <div class="date-of-birth">
+            <h5>Date of Birth:</h5>
+            <p>Month:</p>
+            <input type="text" name="dobMonth" id="dob-month">
+            <p>Day:</p>
+            <input type="text" name="dobDay" id="dob-day">
+            <p>Year:</p>
+            <input type="text" name="dobYear" id="dob-year">
+        </div>
+    </div>
+
+    <!-- starting date -->
+    <div class="create-starting-date">
+        <h5>Start Date:</h5>
+
+
+        <label for="starting-date">
+            <div class="stMonth">
+                <h6>Month:</h6>
+                <input type="text" name="createStartingMonth" id="starting-month" value="">
+            </div>
+
+            <div class="stDay">
+                <h6>Day:</h6>
+                <input type="text" name="createStartingDay" id="starting-day" value="">
+            </div>
+
+            <div class="stYear">
+                <h6>Year:</h6>
+                <input type="text" name="createStartingYear" id="starting-year" value="">
+            </div>
+        </label>
+
+    </div>
+
+    <!-- number of weeks -->
+    <div class="create-number-of-weeks">
+        <h5>Number of weeks:</h5>
+        <input type="text" id="number-of-weeks" name="createNumberOfWeeks">
+    </div>
+
+    <!-- button -->
+    <div class="create-calculate">
+        <button id="create-calculate-button" type="submit">Create</button>
+    </div>
+
+</form>
+
+
+<!-- result -->
+<div class="create-result">
+    <h4><%= dataAlreadyExists %></h4>
+</div>
+
+
+<%-include("partials/footer");-%>

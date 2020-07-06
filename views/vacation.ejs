@@ -1,0 +1,67 @@
+<%- include("partials/headerVacation"); -%>
+
+
+<!-- Todo list
+I would like to let the user enter vacation period manually and have it fixed,
+so that the algorithm will automatically rule out those periods 
+Maybe I can add some CSS to differentiate the colour of vacation period dates on the calendar -->
+
+
+<div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-sm-10 main-calendar">
+            <%- include("partials/calendar"); -%>
+        </div>
+        <div class="col-sm-2 main-buttons">
+            <div id="functions" class="functions">
+                <a href="vacationCreate"
+                    onclick="window.open(this.href, 'targetWindow', `resizable=yes, width=600, height=700, top=20, left=600`); return false;"><button
+                        id="create" class="function-button">Create<br>Vacation</button></a>
+                <a href="vacationEdit"
+                    onclick="window.open(this.href, 'targetWindow', `resizable=yes, width=600, height=700, top=20, left=600`); return false;"><button
+                        id="edit" class="function-button">Edit<br>Vacation</button></a>
+                <a href="vacationDatabase"
+                    onclick="window.open(this.href, 'targetWindow', `resizable=yes, width=600, height=700, top=20, left=600`); return false;"><button
+                        id="edit" class="function-button">Vacation<br>Database</button></a>
+                <a href="vacationDelete"
+                    onclick="window.open(this.href, 'targetWindow', `resizable=yes, width=600, height=700, top=20, left=600`); return false;"><button
+                        id="delete" class="function-button">Delete<br>Vacation</button></a>
+
+            </div>
+            <div class="go-to-students">
+                <a href="/">
+                    <h5><strong>Go to<br>Students</strong></h5>
+                </a>
+            </div>
+        </div>
+
+
+
+        <div class="current-date">
+            <h4>:: Current date and time ::</h4>
+            <p id="current-date-time">
+                <script>
+                    function updateTime() {
+                        let currentTime = new Date().toLocaleTimeString();
+                        let todayDate = new Date().toLocaleDateString();
+                        document.getElementById("current-date-time").innerHTML = [todayDate, currentTime].join(" :: ");
+                        setTimeout(updateTime, 1000);
+                    }
+
+                    updateTime();
+                </script>
+            </p>
+
+            <div class="location-weather">
+                <form action="/" method="post">
+                    The weather in <%=cityName%> is now: [<%=weatherDescription%>] :: Low: <%=currentTempLow%>&deg;C /
+                    High: <%=currentTempHigh%>&deg;C
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<%- include("partials/footer"); -%>

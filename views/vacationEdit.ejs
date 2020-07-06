@@ -1,0 +1,69 @@
+<%-include("partials/headerVacation");-%>
+
+<!-- entering vacation name -->
+<form action="/vacationEdit" method="post">
+    <div class="find-vacation-name">
+        <h5><strong>Find a vacation</strong></h5>
+        <h5 id="find-vac-name">Name:</h5>
+        <input type="text" name="findVacationName" id="find-vacation-name">
+        <div class="find-vacation-starting-date">
+            <h5>Start Date:</h5>
+            <h6>Month:</h6>
+            <input type="text" name="findVacationStartingMonth" id="find-vacation-starting-month">
+            <h6>Day:</h6>
+            <input type="text" name="findVacationStartingDay" id="find-vacation-starting-day">
+            <h6>Year:</h6>
+            <input type="text" name="findVacationStartingYear" id="find-vacation-starting-year">
+        </div>
+        <p id="vac-or">or:</p>
+        <div class="find-vacation-ending-date">
+            <h5>End Date:</h5>
+            <h6>Month:</h6>
+            <input type="text" name="findVacationEndingMonth" id="find-vacation-ending-month">
+            <h6>Day:</h6>
+            <input type="text" name="findVacationEndingDay" id="find-vacation-ending-day">
+            <h6>Year:</h6>
+            <input type="text" name="findVacationEndingYear" id="find-vacation-ending-year">
+        </div>
+    </div>
+
+
+
+    <!-- starting date -->
+
+    <div class="update-vacation-name">
+        <h5 class="vac-new-name"><strong>Update vacation data</strong></h5>
+        <h5 id="update-vac-name">New Name:</h5>
+        <input type="text" name="updateVacationName" id="find-vacation-name">
+    </div>
+    <div class="update-vacation-starting-date">
+        <h5>New Start Date:</h5>       
+            <h6>Month:</h6>
+            <input type="text" name="updateVacationStartingMonth" id="update-vacation-starting-month" value="">
+            <h6>Day:</h6>
+            <input type="text" name="updateVacationStartingDay" id="update-vacation-starting-day" value="">
+            <h6>Year:</h6>
+            <input type="text" name="updateVacationStartingYear" id="update-vacation-starting-year" value="">
+    </div>
+
+    <div class="update-vacation-ending-date">
+        <h5>New End Date:</h5>
+            <h6>Month:</h6>
+            <input type="text" name="updateVacationEndingMonth" id="update-vacation-ending-month" value="">
+            <h6>Day:</h6>
+            <input type="text" name="updateVacationEndingDay" id="update-vacation-ending-day" value="">
+            <h6>Year:</h6>
+            <input type="text" name="updateVacationEndingYear" id="update-vacation-ending-year" value="">
+    </div>
+
+    <!-- button -->
+    <div class="update-vacation-button">
+        <button type="submit">Find and Update</button>
+    </div>
+
+    <div class="no-v-matches">
+        <h4><%=noVMatches%></h4>
+    </div>
+</form>
+
+<%-include("partials/footer");-%>

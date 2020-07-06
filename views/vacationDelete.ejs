@@ -1,0 +1,51 @@
+<%-include("partials/headerVacation");-%>
+
+<!-- entering student's name -->
+
+<div class="delete-vacation-name">
+    <form action="/vacationDelete" method="post">
+        <p>** Please make sure to fill all the blanks **</p>
+        <div class="delete-vacation-name">
+            <h5>Name:</h5>
+            <input type="text" name="getVacationName">
+        </div>
+
+        <div class="delete-vacation-start-date">
+            <h5>Start date:</h5>
+            <h6>Month:</h6>
+            <input type="text" id="deleteSMonth" name="deleteStartMonth">
+            <h6>Day:</h6>
+            <input type="text" id="deleteSDay" name="deleteStartDay">
+            <h6>Year:</h6>
+            <input type="text" id="deleteSYear" name="deleteStartYear">
+        </div>
+
+        <div class="delete-vacation-end-date">
+            <h5>End date:</h5>
+            <h6>Month:</h6>
+            <input type="text" id="deleteEMonth" name="deleteEndMonth">
+            <h6>Day:</h6>
+            <input type="text" id="deleteEDay" name="deleteEndDay">
+            <h6>Year:</h6>
+            <input type="text" id="deleteEYear" name="deleteEndYear">
+        </div>
+        <button class="fandDButton" type="submit">Find and delete</button>
+    </form>
+</div>
+
+<!-- show info -->
+<div class="vac-delete-current-data">
+    <br>
+    <h5><%= vacDeleteConfirmMessage %></h5>
+</div>
+
+<!-- button -->
+<div class="vac-delete-confirm">
+    <button type="button" class="success-close-btn"
+        onclick="window.open('', '_self', ''); window.close();">Close</button>
+</div>
+</div>
+
+
+
+<%-include("partials/footer");-%>

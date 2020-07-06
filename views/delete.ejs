@@ -1,0 +1,40 @@
+<%-include("partials/headerStudent");-%>
+
+<!-- entering student's name -->
+
+<div class="delete-student-name">
+    <form action="/delete" method="post">
+        <h4>First name</h4>
+        <input type="text" name="findStudentFName">
+        <h4>Last name:</h4>
+        <input type="text" name="findStudentLName">
+        <div class="delete-dob">
+            <h4>Date of Birth:</h4>
+            <p>(Please fill all the blanks)</p>
+            <h5>Month</h5>
+            <input type="text" id="deleteBMonth" name="deleteBirthMonth">
+            <h5>Day:</h5>
+            <input type="text" id="deleteBDay" name="deleteBirthDay">
+            <h5>Year:</h5>
+            <input type="text" id="deleteBYear" name="deleteBirthYear">
+        </div>
+        <button class="fandDButton" type="submit">Find and delete</button>
+    </form>
+</div>
+
+<!-- show info -->
+<div class="delete-current-data">
+    <br>
+    <h5><%= deleteConfirmMessage %></h5>
+</div>
+
+<!-- button -->
+<div class="delete-confirm">
+    <button type="button" class="success-close-btn"
+        onclick="window.open('', '_self', ''); window.close();">Close</button>
+</div>
+</div>
+
+
+
+<%-include("partials/footer");-%>

@@ -1,0 +1,29 @@
+<%- include("partials/headerStudent"); -%>
+
+<div class="delete-message">
+    <h5>Successfully deleted the data:</h5>
+</div>
+
+<div class="delete-info">
+    <div class="delete-name">
+        <h6>Name: </h6>
+        <p><%= delFName %> <%= delLName %></p>
+    </div>
+    <div class="delete-dob">
+        <h6>Date of birth:</h6>
+        <p><%=delBirthMonth%>.<%=delBirthDay%>.<%=delBirthYear%></p>
+    </div>
+    </div>
+</div>
+
+
+<div class="delete-btns">
+    <form action="/delete">
+        <button type="submit" class="delete-create-btn">Delete another</button>
+    </form>
+    <br>
+    <button type="button" class="delete-close-btn"
+        onclick="window.open('', '_self', ''); window.close();">Close</button>
+</div>
+
+<%- include("partials/footer"); -%>

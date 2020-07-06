@@ -1,0 +1,71 @@
+<%-include("partials/headerVacation");-%>
+
+
+<!-- vacation name -->
+<form action="/vacationCreate" method="post">
+
+    <div class="create-vacation">
+
+        <h5>Vacation name:</h5>
+        <div class="create-vName">
+
+            <input type="text" name="createVacationName" id="create-vacation-name" value="">
+
+        </div>
+
+    </div>
+
+    <!-- starting date -->
+    <div class="create-vacation-starting-date">
+        <h5>Start Date:</h5>
+
+        <div class="vac-stMonth">
+            <h6>Month:</h6>
+            <input type="text" name="vacationStartingMonth" id="vac-starting-month" value="">
+        </div>
+
+        <div class="vac-stDay">
+            <h6>Day:</h6>
+            <input type="text" name="vacationStartingDay" id="vac-starting-day" value="">
+        </div>
+
+        <div class="vac-stYear">
+            <h6>Year:</h6>
+            <input type="text" name="vacationStartingYear" id="vac-starting-year" value="">
+        </div>
+    </div>
+    <div class="create-vacation-ending-date">
+        <h5>End Date:</h5>
+        <div class="vac-endMonth">
+            <h6>Month:</h6>
+            <input type="text" name="vacationEndingMonth" id="vac-ending-month" value="">
+        </div>
+
+        <div class="vac-endDay">
+            <h6>Day:</h6>
+            <input type="text" name="vacationEndingDay" id="vac-ending-day" value="">
+        </div>
+
+        <div class="vac-endYear">
+            <h6>Year:</h6>
+            <input type="text" name="vacationEndingYear" id="vac-ending-year" value="">
+        </div>
+    </div>
+
+
+    <!-- button -->
+    <div class="vacation-create-button">
+        <button id="create-vacation-button" type="submit">Create Vacation</button>
+    </div>
+
+</form>
+
+
+<!-- result -->
+<div class="vacation-create-result">
+    <h4><%= vacDataAlreadyExists %></h4>
+</div>
+
+
+
+<%-include("partials/footer");-%>

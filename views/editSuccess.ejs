@@ -1,0 +1,43 @@
+<%- include("partials/headerStudent"); -%>
+
+<div class="edit-success-message">
+    <h5><%=editMsgOne%></h5>
+</div>
+
+<div class="edit-success-info">
+    <div class="edit-success-name">
+        <h6>Name: </h6>
+        <p><%= editSuccFName %> <%= editSuccLName %></p>
+    </div>
+    <div class="edit-success-dob">
+        <h6>Date of Birth:</h6>
+        <p><%= editSuccBirthMonth %>/<%= editSuccBirthDay %>/<%= editSuccBirthYear %></p>
+    </div>
+    <div class="edit-success-message">
+        <h5><%=editMsgTwo%></h5>
+    </div>
+    <div class="edit-success-starting-date">
+        <h6>Starting date: </h6>
+        <p><%= editSuccStartingMonth %>/<%= editSuccStartingDay %>/<%= editSuccStartingYear %></p>
+    </div>
+    <div class="edit-success-ending-date">
+        <h6>Ending date: </h6>
+        <p><%= editSuccEndingMonth %>/<%= editSuccEndingDay %>/<%= editSuccEndingYear %></p>
+    </div>
+    <div class="edit-suceess-num-of-weeks">
+        <h6># of weeks: </h6>
+        <p><%= editSuccNumOfWeeks %></p>
+    </div>
+</div>
+
+
+<div class="edit-success-btns">
+    <form action="/edit">
+        <button type="submit" class="edit-success-create-btn">Edit another</button>
+    </form>
+    <br>
+    <button type="button" class="edit-success-close-btn"
+        onclick="window.open('', '_self', ''); window.close();">Close</button>
+</div>
+
+<%- include("partials/footer"); -%>
